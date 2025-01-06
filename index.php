@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +38,8 @@
             <a href="#services" style="--i:3">Services</a>
             <a href="#portfolio" style="--i:4">Product</a>
             <a href="#contact" style="--i:5">Contact</a>
-            <a href="price.html" style="--i:6">Price</a>
+            <a href="price.php" style="--i:6">Price</a>
+            <a href="loginform.php" style="--i:7">Login to Dashboard</a>
         </nav>
     </header>
 
@@ -46,7 +51,7 @@
                 <h3>What I Offer: <span class="text"></span></h3>
                 <p>Let's turn your dreams into reality!.</p>
             </div>
-            <a href="contact.html" class="btn-box">Check Info</a>
+            <a href="contact.php" class="btn-box">Check Info</a>
         </div>
     </section>
 
@@ -81,21 +86,21 @@
                         <h2>Web Design</h2>
                         <p>Menyediakan layanan desain web dengan sentuhan estetika dan elegan, mengutamakan tampilan
                             yang lembut dan menenangkan untuk pengalaman browsing yang berkesan</p>
-                        <a href="form.html" class="read" target="_blank">Order Now</a>
+                        <a href="form.php?service=Web%20Design" class="read" target="_blank">Order Now</a>
                     </div>
                     <div>
                         <i class='bx bx-crop' style='color:rgb(0, 217, 255)'></i>
                         <h2>UI/UX Design</h2>
                         <p>Merancang antarmuka dan pengalaman pengguna yang halus dan intuitif, menghadirkan kesan
                             lembut dan estetis di setiap elemen agar tampilan terasa nyaman dan harmonis</p>
-                        <a href="form.html" class="read" target="_blank">Order Now</a>
+                        <a href="form.php?service=UI/UX%20Design" class="read" target="_blank">Order Now</a>
                     </div>
                     <div>
                         <i class='bx bxl-apple' style='color:rgb(0, 217, 255)'></i>
                         <h2>App Design</h2>
                         <p>Desain aplikasi yang memadukan kelembutan dan kesederhanaan, menekankan pada keindahan dan
                             kesan elegan untuk menciptakan pengalaman pengguna yang menenangkan</p>
-                        <a href="form.html" class="read" target="_blank">Order Now</a>
+                        <a href="form.php?service=App%20Design" class="read" target="_blank">Order Now</a>
                     </div>
                 </div>
             </div>
@@ -116,7 +121,7 @@
                                 input berat badan dan tinggi badan pengguna. Aplikasi ini dirancang untuk memberikan
                                 informasi kesehatan secara cepat dan praktis.
                             </p>
-                            <a href="form.html" class="read" target="_blank">Order Now</a>
+                            <a href="form.php?service=kalkulator%20BMI" class="read" target="_blank">Order Now</a>
                         </div>
                     </div>
 
@@ -128,7 +133,7 @@
                                 diri, pengalaman, dan cara menghubungi pemilik. Desain yang elegan dan user-friendly
                                 memberikan kesan profesional dan mudah dinavigasi.
                             </p>
-                            <a href="form.html" class="read" target="_blank">Order Now</a>
+                            <a href="form.php?service=Personal%20Website" class="read" target="_blank">Order Now</a>
                         </div>
                     </div>
 
@@ -140,7 +145,7 @@
                                 acara, dan notifikasi. Aplikasi ini dirancang untuk memudahkan pengorganisasian dan
                                 pelaksanaan acara secara efisien.
                             </p>
-                            <a href="form.html" class="read" target="_blank">Order Now</a>
+                            <a href="form.php?service=App%20Management%20Event" class="read" target="_blank">Order Now</a>
 
                         </div>
                     </div>
@@ -179,15 +184,14 @@
         </div>
 
         <div class="contact-form">
-            <form action="">
-                <input type="" placeholder="Enter Your Name" required>
-                <input type="email" placeholder="Enter Your Email" required>
-
-                <input type="" placeholder="Enter Your Subject">
-                <textarea name="" id="" cols="48" rows="10" placeholder="Enter Your Message" required></textarea>
-                <input type="submit" value="submit" class="send">
-            </form>
-        </div>
+        <form action="submit_message.php" method="POST">
+        <input type="text" name="name" placeholder="Enter Your Name" required>
+        <input type="email" name="email" placeholder="Enter Your Email" required>
+        <input type="text" name="subject" placeholder="Enter Your Subject">
+        <textarea name="message" id="" cols="48" rows="10" placeholder="Enter Your Message" required></textarea>
+        <input type="submit" value="Submit" class="send">
+    </form>
+    </div>
     </section>
     <div class="last-text">
         <p>&copy; 2025 by Tri Cahya Armanditha. Crafted with passion and creativity.</p>

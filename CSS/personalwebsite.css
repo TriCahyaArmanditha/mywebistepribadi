@@ -56,18 +56,6 @@ body {
     color: rgb(0, 217, 255);
 }
 
-.home {
-    position: relative;
-    width: 100%;
-    justify-content: space-between;
-    height: 100vh;
-    background: url(back.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 70px 10% 0;
-}
 
 .home-content {
     display: flex;
