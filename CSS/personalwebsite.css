@@ -552,13 +552,13 @@ body {
     border-radius: 0.5rem;
 }
 
-/* Definisi animasi masing-masing */
+
 @keyframes html-animation {
     from {
         width: 0%;
     }
     to {
-        width: 80%; /* Hanya sampai 80% */
+        width: 80%;
     }
 }
 
@@ -567,7 +567,7 @@ body {
         width: 0%;
     }
     to {
-        width: 70%; /* Hanya sampai 70% */
+        width: 70%; 
     }
 }
 
@@ -576,11 +576,9 @@ body {
         width: 0%;
     }
     to {
-        width: 60%; /* Hanya sampai 60% */
+        width: 60%; 
 }
 }
-
-
 @keyframes progress {
     from {
         width: 0;

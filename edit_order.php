@@ -63,13 +63,17 @@ if (isset($_GET['id'])) {
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
+            background: url(backgrounduserdashboard.jpg);
+            background-position: center;
+            background-size: cover;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
         }
 
         header {
-            background-color: #1e90ff;
+            background-color: rgba(2, 29, 55, 0.8); /* Blue with transparency */
             color: white;
             padding: 15px 0;
             text-align: center;
@@ -91,7 +95,7 @@ if (isset($_GET['id'])) {
         }
 
         .form-container {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.7); /* Transparent white */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -108,7 +112,7 @@ if (isset($_GET['id'])) {
         .form-container input[type="text"],
         .form-container input[type="email"],
         .form-container input[type="number"] {
-            width: 100%;
+            width: 95%;
             padding: 10px;
             margin-top: 5px;
             margin-bottom: 15px;
@@ -117,7 +121,7 @@ if (isset($_GET['id'])) {
         }
 
         .form-container input[type="submit"] {
-            background-color: #1e90ff;
+            background-color:rgb(4, 32, 59);
             color: white;
             border: none;
             padding: 10px 20px;
@@ -128,6 +132,27 @@ if (isset($_GET['id'])) {
 
         .form-container input[type="submit"]:hover {
             background-color: #4682b4;
+        }
+
+        /* Styling for table */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1e3a5f; /* Dark blue */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(240, 248, 255, 0.8); /* Slight transparent background for rows */
         }
 
         /* Responsive Design */
